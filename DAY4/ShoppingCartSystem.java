@@ -1,3 +1,5 @@
+package DAY4;
+
 class Shopping {
     int id;
     String name;
