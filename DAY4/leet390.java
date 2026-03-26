@@ -1,3 +1,5 @@
+package DAY4;
+
 public class leet390 {
 
     public static void main(String[] args) {

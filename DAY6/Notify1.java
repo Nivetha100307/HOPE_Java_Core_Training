@@ -20,7 +20,7 @@ class EmailNotification extends Notification {
     EmailNotification(String name, String message) {
         super(name, message);
     }
-
+    @Override
     void send() {
         System.out.println("Sending Email to: " + name);
         System.out.println("Message: " + message);
@@ -32,7 +32,7 @@ class SMSNotification extends Notification {
     SMSNotification(String name, String message) {
         super(name, message);
     }
-
+    @Override
     void send() {
         System.out.println("Sending SMS to: " + name);
         System.out.println("Message: " + message);
@@ -42,10 +42,12 @@ class SMSNotification extends Notification {
 public class Notify1 {
     public static void main(String[] args) {
 
-        Notification n = new EmailNotification("test", "Hello Email!");
-        n.send();
-
-        n = new SMSNotification("test", "Hello SMS!");
-        n.send();
+        Notification n1 = new EmailNotification("test", "Hello Email!");
+        Notification n2;
+        n2 = new SMSNotification("test", "Hello SMS!");
+        Notification notify[] = {n1, n2};
+        for (Notification n : notify) {
+            n.send();
+        }
     }
 }
