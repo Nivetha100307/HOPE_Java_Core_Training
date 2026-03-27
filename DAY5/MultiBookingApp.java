@@ -1,5 +1,3 @@
-package DAY5;
-
 // ================= BASE CLASS =================
 class User {
     String name;

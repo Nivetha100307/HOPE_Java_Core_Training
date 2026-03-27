@@ -10,6 +10,7 @@ public class Test1 {
 
         if (str.length() == 0) {
             System.out.println("0");
+            sc.close();
             return;
         }
 
@@ -26,5 +27,6 @@ public class Test1 {
         }
 
         System.out.println(count);
+        sc.close();
     }
 }
