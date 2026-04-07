@@ -39,6 +39,7 @@ class LinkedList {
         if (pos == 0) {
             insertAtStart(data);
             return;
+
         }
         Node newNode = new Node(data);
         Node temp = head;
